@@ -17,10 +17,15 @@ public class EnvironmentManager : MonoBehaviour {
 		snow.GetComponent<EnvironmentElement> ().UpdateAmount (snowAmount);
 		ice.GetComponent<EnvironmentElement> ().UpdateAmount (snowAmount/2);
 
-		player.GetComponentInChildren<LookScript> ().setBobAmount (snowAmount);
+		//player.GetComponentInChildren<LookScript> ().setBobAmount (snowAmount);
 	}
 
 	public void SnowAmount(float amount){
 		snowAmount = amount;
+		Invoke("ZeroOut", 5f);
+	}
+	
+	public void ZeroOut(){
+		snowAmount = 0;
 	}
 }
