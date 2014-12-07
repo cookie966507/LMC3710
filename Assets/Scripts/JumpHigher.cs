@@ -11,11 +11,7 @@ public class JumpHigher : MonoBehaviour {
 	
 	public void UpdateJump(){
 		player.GetComponent<PlayerController>().jumpVelocity += 7;
-<<<<<<< HEAD
 		Invoke("BackToNormal", 7-1);
-=======
-		Invoke("BackToNormal", 5f);
->>>>>>> origin/master
 	}
 	public void BackToNormal(){
 		player.GetComponent<PlayerController>().jumpVelocity -= 7;
