@@ -12,7 +12,11 @@ public class Wind : MonoBehaviour {
 	
 	public void UpdateWind(){
 		player.GetComponent<PlayerController>().wind += .7f*dir;
+<<<<<<< HEAD
 		Invoke("BackToNormal", 3-1);
+=======
+		Invoke("BackToNormal", 5);
+>>>>>>> origin/master
 	}
 	public void BackToNormal(){
 		player.GetComponent<PlayerController>().wind -= .7f*dir;
