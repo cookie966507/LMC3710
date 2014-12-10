@@ -30,7 +30,7 @@ public class KeyButton : MonoBehaviour {
 			ExecuteEvents.Execute(gameObject, pointer, ExecuteEvents.pointerEnterHandler);
 			ExecuteEvents.Execute(gameObject, pointer, ExecuteEvents.submitHandler);
 			Invoke("ReleaseKey", timer-1);
-			manager.ReleaseTimer(timer-1);
+			manager.ReleaseTimer(timer);
 			im.gameObject.SetActive(true);
 			InvokeRepeating("ScaleDown", 0, step);
 			Invoke("ReleaseKey", timer);
